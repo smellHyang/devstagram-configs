@@ -1,4 +1,21 @@
-my-config.name: default
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: userservice
+          uri: http://localhost:9090
+          predicates:
+            - Path=/user/**
+        - id: postservice
+          uri: http://localhost:9091
+          predicates:
+            - Path=/posts/**
+          filters:
+            - RewritePath=/posts/(?<path>.*),/$\{path}
+        - id: meetupservice
+          uri: http://localhost:9092
+          predicates:
+            - Path=/meetup/**
 
 management:
   endpoints:
