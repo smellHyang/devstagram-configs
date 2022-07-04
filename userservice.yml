@@ -1,5 +1,4 @@
-server:
-  port: 8089
+my-config.name: default
 
 management:
   endpoints:
