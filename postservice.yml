@@ -1,0 +1,7 @@
+my-config.name: default
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
