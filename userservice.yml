@@ -1,9 +1,8 @@
-spring:
-  application:
-    name: userservice
-  profiles:
-    active:
-      default
-  cloud:
-    config:
-      import: "optional:configserver:http://localhost:8888/"
+server:
+  port: 8089
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
