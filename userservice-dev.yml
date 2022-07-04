@@ -2,7 +2,7 @@ spring:
   application:
     name: userservice
   profiles:
-    dev
+    active: dev
   cloud:
     config:
       import: "optional:configserver:http://localhost:8888/"
